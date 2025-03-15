@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rainbow Text Animation (No JavaScript)</title>
+	<style>
+		.rainbow-text {
+			font-size: 3rem;
+			font-weight: bold;
+			display: inline-block;
+			width: fit-content;
+			margin: 0 auto;
+		}
+
+		.rainbow-text span {
+			display: block;
+			/* Change from inline-block to block */
+			animation: rainbow-animation 5s linear infinite;
+			line-height: 1.2;
+			/* Add some spacing between the lines */
+		}
+
+		@keyframes rainbow-animation {
+
+			0%,
+			100% {
+				color: #ff0000;
+			}
+
+			/* Red */
+			12.5% {
+				color: #ff8800;
+			}
+
+			/* Orange */
+			25% {
+				color: #ffff00;
+			}
+
+			/* Yellow */
+			37.5% {
+				color: #00ff00;
+			}
+
+			/* Green */
+			50% {
+				color: #0088ff;
+			}
+
+			/* Blue */
+			62.5% {
+				color: #8800ff;
+			}
+
+			/* Purple */
+			75% {
+				color: #ff0088;
+			}
+
+			/* Pink */
+			87.5% {
+				color: #ff4400;
+			}
+
+			/* Red-Orange */
+		}
+
+		/* Add negative animation-delay values to start mid-cycle */
+		.rainbow-text span:nth-child(1) {
+			animation-delay: -4.0s;
+		}
+
+		.rainbow-text span:nth-child(2) {
+			animation-delay: -3.8s;
+		}
+
+		.rainbow-text span:nth-child(3) {
+			animation-delay: -3.6s;
+		}
+
+		.rainbow-text span:nth-child(4) {
+			animation-delay: -3.4s;
+		}
+
+		.rainbow-text span:nth-child(5) {
+			animation-delay: -3.2s;
+		}
+
+		.rainbow-text span:nth-child(6) {
+			animation-delay: -3.0s;
+		}
+
+		.rainbow-text span:nth-child(7) {
+			animation-delay: -2.8s;
+		}
+
+		.rainbow-text span:nth-child(8) {
+			animation-delay: -2.6s;
+		}
+
+		.rainbow-text span:nth-child(9) {
+			animation-delay: -2.4s;
+		}
+
+		.rainbow-text span:nth-child(10) {
+			animation-delay: -2.2s;
+		}
+
+		.container {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			width: 80%;
+			margin: 0 auto;
+			text-align: center;
+			gap: 20px;
+		}
+
+		#pic {
+			width: 50vw;
+			object-fit: contain;
+		}
+
+		.pic-container {
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h1 class="rainbow-text">
+			<span>J</span>
+			<span>A</span>
+			<span>Y</span>
+		</h1>
+		<h1 class="rainbow-text">
+			<span>I</span>
+			<span>S</span>
+		</h1>
+		<h1 class="rainbow-text">
+			<span>G</span>
+			<span>A</span>
+			<span>Y</span>
+		</h1>
+	</div>
+	<div class="pic-container">
+		<img id="pic" src="assets/jayland.jpg" />
+	</div>
+</body>
+
+</html>

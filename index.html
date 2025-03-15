@@ -6,6 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Rainbow Text Animation (No JavaScript)</title>
 	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
 		.rainbow-text {
 			font-size: 3rem;
 			font-weight: bold;
@@ -16,10 +22,8 @@
 
 		.rainbow-text span {
 			display: block;
-			/* Change from inline-block to block */
 			animation: rainbow-animation 5s linear infinite;
 			line-height: 1.2;
-			/* Add some spacing between the lines */
 		}
 
 		@keyframes rainbow-animation {
@@ -117,16 +121,33 @@
 			gap: 20px;
 		}
 
-		#pic {
-			width: 50vw;
+		/* For responsive design and to keep photo close to content */
+		img {
+			max-width: 100%;
+			height: auto;
+			margin-top: 20px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 75vw;
 			object-fit: contain;
 		}
 
-		.pic-container {
-			width: 100vw;
-			height: 100vh;
-			display: flex;
-			justify-content: center;
+		/* For mobile screens */
+		@media (max-width: 768px) {
+			.container {
+				gap: 10px;
+			}
+
+			.rainbow-text {
+				font-size: 2.5rem;
+				/* Slightly smaller font on mobile */
+			}
+
+			img {
+				margin-top: 15px;
+				/* Less space above image on mobile */
+			}
 		}
 	</style>
 </head>
